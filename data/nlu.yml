@@ -1,0 +1,162 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - mornin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yuh
+    - wassup
+    - mownin
+    - yo
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: reservation
+  examples: |
+    - i would like to do a reservation
+    - reserve please
+    - appointments
+    - book please
+    - reservation
+    - book
+
+- intent: inform
+  examples: |
+    - [danny](PERSON)
+    - [haneen](PERSON)
+    - [david](PERSON)
+    - [felix urf kjellberg](PERSON)
+    - [marzia bisognin](PERSON)
+    - [stephan](PERSON)
+    - [pot](PERSON)
+    - my name is [harry](PERSON)
+    - i'm [mack](PERSON)
+    - the name [johnny](PERSON)
+    - name [harris](PERSON)
+    - you can call me [artiom](PERSON)
+    - call me [tom](PERSON)
+    - people call me [holland](PERSON)
+    - it is i [shafa](PERSON)
+    - ME? I AM [mike](PERSON)
+    - it's [olin](PERSON)
+
+    - [july the 20th](DATE)
+    - [13 of september](DATE)
+    - [14 february](DATE)
+    - [20 august](DATE)
+    - [eleven september](DATE)
+    - [1st of january](DATE)
+    - [2nd of february](DATE)
+    - [3rd of march](DATE)
+    - for [january the first](DATE)
+    - at [october 20th](DATE)
+    - on the [4th of april](DATE)
+    - for [july 3](DATE)
+    - [december 9](DATE) pls
+    - for [august 17](DATE) please
+
+    # - [10 am]{"entity":"TIME", "role":"start"} to [12 pm]{"entity":"TIME", "role":"end"}
+    # - [16.00]{"entity":"TIME", "role":"start"} to [18.00]{"entity":"TIME", "role":"end"}
+    # - [8 am]{"entity":"TIME", "role":"start"} to [10 am]{"entity":"TIME", "role":"end"}
+    # - from [18.00 pm]{"entity":"TIME", "role":"start"} to [20.00 pm]{"entity":"TIME", "role":"end"} pls
+    # - from [6.30]{"entity":"TIME", "role":"start"} to [7.00]{"entity":"TIME", "role":"end"} please
+
+    - [5 am]{"entity":"TIME"}
+    - [6 am]{"entity":"TIME"}
+    - [7 am]{"entity":"TIME"}
+    - [12 pm]{"entity":"TIME"}
+    - [1 pm]{"entity":"TIME"}
+    - [3.30 pm]{"entity":"TIME"} pls
+    - [19.00]{"entity":"TIME"}
+    - [9.30]{"entity":"TIME"}
+    - [10.30]{"entity":"TIME"}
+    - at [18.25]{"entity":"TIME"}
+    - on [3.30 pm]{"entity":"TIME"}
+    - for [5.15 pm]{"entity":"TIME"}
+    - for [9 am]{"entity":"TIME"} please
+    - to [4.30 pm]{"entity":"TIME"}
+    - to [6.15 pm]{"entity":"TIME"}
+    - to [10 am]{"entity":"TIME"} please

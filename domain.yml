@@ -1,0 +1,97 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+  - reservation
+  - inform
+
+entities:
+  - PERSON
+  - DATE
+  - TIME
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: PERSON
+        intent: inform
+        not_intent: 
+          - greet
+          - goodbye
+          - affirm
+          - deny
+  date:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: DATE
+        intent: inform
+  time_start:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: TIME
+        intent: inform
+  time_end:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: TIME
+        intent: inform
+
+forms:
+  reservation_form:
+    required_slots:
+      - name
+      - date
+      - time_start
+      - time_end
+
+responses:
+  utter_greet:
+  - text: "Hey! What can i do for you?"
+  - text: "Hello there :), how may i help you?"
+  - text: "Hello! How can i help?"
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_did_that_help:
+  - text: "Did that help you?"
+  utter_happy:
+  - text: "Great, carry on!"
+  utter_goodbye:
+  - text: "Bye"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_name:
+  - text: "Sure! Who's the name of the reserver?"
+  utter_ask_date:
+  - text: "Hello {name}, on what date will you be reserving?"
+  utter_ask_time_start:
+  - text: "Perfect! On what time?"
+  utter_ask_time_end:
+  - text: "To what time will you be reserving the spot?"
+  utter_thank_reservation:
+  - text: "Your reservation for {name}, on {date}, from {time_start} to {time_end} is created! See you there :)"
+
+actions:
+- validate_reservation_form
+- action_reset_all_slots
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
