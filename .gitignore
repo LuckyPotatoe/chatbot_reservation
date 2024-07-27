@@ -1,5 +1,5 @@
 /__pycache__
 /.rasa
-/models
+/models/*.tar.gz
 
 /actions/__pycache__
